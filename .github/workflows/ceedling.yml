@@ -20,3 +20,18 @@ jobs:
       - run: sudo gem install ceedling
       - run: sudo apt-get -y install gcc-arm-none-eabi
       - run: ceedling test:all
+
+  release:
+    # Name the Job
+    name: Build release binary
+    # Set the type of machine to run on
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - run: sudo gem install ceedling
+      - run: sudo apt-get -y install gcc-arm-none-eabi
+      - run: ceedling release
