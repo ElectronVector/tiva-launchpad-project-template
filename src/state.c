@@ -7,7 +7,7 @@ STATE StateGetNext(STATE current)
     switch(current)
     {
         case STATE_RED:
-            next = STATE_GREEN;
+            next = STATE_BLUE;
             break;
         case STATE_GREEN:
             next = STATE_BLUE;
