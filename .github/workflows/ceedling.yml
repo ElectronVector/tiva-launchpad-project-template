@@ -1,0 +1,43 @@
+name: Ceedling
+
+# Run this workflow every time a new commit pushed to your repository
+on: push
+
+jobs:
+  # Set the job key. The key is displayed as the job name
+  # when a job name is not provided
+  unit-tests:
+    # Name the Job
+    name: Run unit tests
+    # Set the type of machine to run on
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - run: sudo gem install ceedling
+      - run: sudo apt-get -y install gcc-arm-none-eabi
+      - run: ceedling test:all
+
+  release:
+    # Name the Job
+    name: Build release binary
+    # Set the type of machine to run on
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - run: sudo gem install ceedling
+      - run: sudo apt-get -y install gcc-arm-none-eabi
+      - run: ceedling release
+
+      - name: Upload release binary
+        uses: actions/upload-artifact@v2
+        with:
+          name: release-binary
+          path: build/release/project.axf
