@@ -49,6 +49,5 @@ There are two software modules -- **state** and **led** -- used to determine the
 In the **led** module, the TivaWare Peripheral Driver Library is used to initialize and control the GPIO pins connected the multi-color LED. This library is in **lib/TivaWare/driverlib** and is built automatically if necessary.
 
 # TODO
-- Add Github actions
 - Update compiler
 - I think we should remove the dockerfile (and ev scripts) since we need access to the USB device.
