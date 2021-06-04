@@ -9,6 +9,7 @@ It provides:
 - Example unit tests that can be run with Ceedling on the host.
 - Builds the TivaWare library and the application for the target.
 - Load to the target board.
+- A Dockerfile that can be used to build in a container.
 
 ## Tiva Launchpad
 
@@ -48,6 +49,8 @@ There are two software modules -- **state** and **led** -- used to determine the
 
 In the **led** module, the TivaWare Peripheral Driver Library is used to initialize and control the GPIO pins connected the multi-color LED. This library is in **lib/TivaWare/driverlib** and is built automatically if necessary.
 
+## Using the Docker container
+Use run the `ev` script (`ev.bat` on Windows) to execute commands in an environment as defined by the Dockerfile. If the Docker container doesn't exist, it is created when `ev` is first run. Log into the container with `ev --build`. Learn more about the [`ev-build` tool in its repo](https://github.com/ElectronVector/ev-build). Note that the Docker container does not provide USB support for connecting to a board.
+
 # TODO
 - Update compiler
-- I think we should remove the dockerfile (and ev scripts) since we need access to the USB device.
