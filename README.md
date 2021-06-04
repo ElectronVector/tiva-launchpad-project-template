@@ -9,6 +9,7 @@ It provides:
 - Example unit tests that can be run with Ceedling on the host.
 - Builds the TivaWare library and the application for the target.
 - Load to the target board.
+- Github Actions for automated test runs (see the Actions tab above).
 - A Dockerfile that can be used to build in a container.
 
 ## Tiva Launchpad
