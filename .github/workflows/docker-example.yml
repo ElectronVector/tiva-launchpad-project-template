@@ -3,9 +3,9 @@ name: docker-example
 on: [push]
 
 jobs:
-  hello_world_job:
+  unit-tests:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Run unit tests
     steps:
       # To use this repository's private action,
       # you must check out the repository
