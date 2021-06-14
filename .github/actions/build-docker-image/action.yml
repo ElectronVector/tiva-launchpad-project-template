@@ -1,0 +1,7 @@
+name: 'Build the Docker image'
+description: 'Build a docker image from the Dockerfile in the top-level project directory'
+runs:
+  using: 'composite'
+  steps:
+    - shell: bash
+      run: "docker build -t project-container ."
