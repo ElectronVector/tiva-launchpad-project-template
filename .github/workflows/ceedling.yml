@@ -1,7 +1,8 @@
 name: Ceedling
 
 # Run this workflow every time a new commit pushed to your repository
-on: push
+# TODO: Remove this.
+#on: push
 
 jobs:
   # Set the job key. The key is displayed as the job name
