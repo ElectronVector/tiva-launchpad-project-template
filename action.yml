@@ -4,4 +4,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - 'ceedling test:all'
+    - 'ceedling'
+    - 'test:all'
