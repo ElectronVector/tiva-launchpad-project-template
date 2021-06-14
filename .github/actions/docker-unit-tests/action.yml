@@ -2,7 +2,7 @@ name: 'Unit tests'
 description: 'Run all host-based unit tests with Ceedling'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: '../../../Dockerfile'
   args:
     - 'ceedling'
     - 'test:all'
