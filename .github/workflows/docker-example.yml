@@ -1,3 +1,5 @@
+name: docker-example
+
 on: [push]
 
 jobs:
