@@ -1,8 +1,0 @@
-name: 'Unit tests'
-description: 'Run all host-based unit tests with Ceedling'
-runs:
-  using: 'docker'
-  image: '../../../Dockerfile'
-  args:
-    - 'ceedling'
-    - 'release'
