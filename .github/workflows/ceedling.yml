@@ -1,7 +1,6 @@
 name: Ceedling
 
 # Run this workflow every time a new commit pushed to your repository
-# TODO: Remove this.
 #on: push
 
 jobs:
@@ -18,9 +17,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - run: sudo gem install ceedling
-      - run: sudo apt-get -y install gcc-arm-none-eabi
-      - run: ceedling test:all
+      - run: ./ev ceedling test:all
 
   release:
     # Name the Job
@@ -33,9 +30,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - run: sudo gem install ceedling
-      - run: sudo apt-get -y install gcc-arm-none-eabi
-      - run: ceedling release
+      - run: sudo ./ev ceedling release
 
       - name: Upload release binary
         uses: actions/upload-artifact@v2
