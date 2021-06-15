@@ -13,3 +13,4 @@ ENV PATH="${PATH}:/usr/local/gcc-arm-none-eabi-8-2019-q3-update/bin"
 
 WORKDIR /app
 
+#ENTRYPOINT ["pwd"]
